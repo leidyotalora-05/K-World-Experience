@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>K-World Experience</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+  
+</head>
+
+<body>
+    
+    <button id="btnIdioma" class="btn btn-primary" type="button">
+     🇬🇧 English
+    </button>
+
+   <body>
+
+    <!-- Pantalla de Inicio -->
+   <section id="inicio">
+
+    <div class="inicio-contenido">
+
+       <h1 data-en="K-WORLD EXPERIENCE" data-es="K-WORLD EXPERIENCE">
+           K-WORLD EXPERIENCE
+       </h1>
+
+       <h2 data-en="Discover South Korea" data-es="Descubre Corea del Sur">
+           Descubre Corea del Sur
+       </h2>
+
+      <p data-en="Explore the best tourist destinations in South Korea." data-es="Explora los mejores destinos turísticos de Corea del Sur.">
+          Explora los mejores destinos turísticos de Corea del Sur.
+      </p>
+
+      <button id="btnExplorar" class="btn btn-primary" data-en="Explore destinations" data-es="Explorar destinos">
+         Explorar Destinos
+      </button>
+
+    </div>
+
+</section>
+
+    <!-- Pantalla de Ciudades -->
+    <section id="ciudades">
+
+        <h1 data-en="Cities" data-es="Ciudades">
+            Ciudades
+        </h1>
+        <h2 data-en="Choose a city" data-es="Elige una ciudad">
+            Elige una ciudad
+        </h2>
+
+        <div class="container">
+
+            <div class="row">
+
+    <!-- Seúl -->
+     <div class="col-md-4">
+
+        <div class="card">
+
+        <img src="assets/Seul.jpg" class="card-img-top" alt="Seúl">
+
+        <div class="card-body">
+
+        <h5 class="card-title" data-en="Seoul" data-es="Seúl">
+            Seúl
+        </h5>
+
+        <p class="card-text" data-en="History, culture and entertainment" data-es="Historia, cultura y entretenimiento">
+            Historia, cultura y entretenimiento
+        </p>
+
+       <button id="btnSeul" class="btn btn-primary" data-en="Seoul Destinations" data-es="Destinos Seúl">
+         Destinos Seúl
+       </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- Busan -->
+     <div class="col-md-4">
+
+            <div class="card">
+
+            <img src="assets/Busan.jpg" class="card-img-top" alt="Busan">
+
+            <div class="card-body">
+
+            <h5 class="card-title" data-en="Busan" data-es="Busan">
+                Busan
+            </h5>
+
+            <p class="card-text" data-en="Beaches, cuisine and landscapes" data-es="Playas, gastronomía y paisajes">
+                Playas, gastronomía y paisajes
+            </p>
+
+          <button id="btnBusan" class="btn btn-primary"data-en="Busan Destinations" data-es="Destinos Busan">
+            Destinos Busan
+          </button>
+
+       </div>
+
+    </div>
+
+</div>
+
+
+    <!-- Jeju -->
+     <div class="col-md-4">
+
+            <div class="card">
+
+            <img src="assets/Jeju.jpg" class="card-img-top" alt="Jeju">
+
+            <div class="card-body">
+
+            <h5 class="card-title" data-en="Jeju" data-es="Jeju">
+                Jeju
+            </h5>
+
+            <p class="card-text" data-en="Nature, culture and activities" data-es="Naturaleza, cultura y actividades">
+                Naturaleza, cultura y actividades
+            </p>
+
+            <button id="btnJeju" class="btn btn-primary" data-en=" Jeju Destinations" data-es="Destinos Jeju">
+               Destinos Jeju
+            </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+       <button id="btnFavoritos" class="btn btn-primary" data-en="My Favorites ♡" data-es="Mis favoritos ♡">
+         Mis favoritos ♡
+       </button>
+
+</section>
+
+    
+<!-- Pantalla de Favoritos -->
+<section id="favoritos">
+
+    <h1 data-en="My Favorites" data-es="Mis favoritos">
+        Mis favoritos
+    </h1>
+
+    <div class="container">
+
+        <div id="listaFavoritos" class="row">
+            
+        </div>
+
+        <p id="mensajeFavoritos" data-en="You don't have any favorites yet." data-es="Todavía no tienes favoritos.">
+            Todavía no tienes favoritos.
+        </p>
+        <p id="mensajeGuardar" data-en="Save your favorite destinations to see them here." data-es="Guarda tus destinos favoritos para verlos aquí.">
+            Guarda tus destinos favoritos para verlos aquí.
+        </p>
+
+     <button id="btnVolverCiudades" class="btn btn-secondary" data-en="Back to cities" data-es="Volver a ciudades">
+         Volver a ciudades
+     </button>
+
+    </div>
+
+</section>
+
+
+   <!-- Pantalla de Destinos -->
+
+<!-- Pantalla de Destinos - Seúl -->
+
+    <section id="destinos_seul">
+
+        <h1 data-en="Destinations" data-es="Destinos">
+            Destinos
+        </h1>
+
+        <h2 data-en="Seoul" data-es="SÉUL">
+            SÉUL
+        </h2>
+
+        <h4 data-en="Filter by category" data-es="Filtrar por categoría">
+         Filtrar por categoría
+       </h4>
+
+<button class="btn btn-outline-primary filtroSeul" data-categoria="todas" data-en="All" data-es="Todas">
+    Todas
+</button>
+
+<button class="btn btn-outline-primary filtroSeul" data-categoria="historia" data-en="History" data-es="Historia">
+    Historia
+</button>
+
+<button class="btn btn-outline-primary filtroSeul" data-categoria="cultura" data-en="Culture" data-es="Cultura">
+    Cultura
+</button>
+
+<button class="btn btn-outline-primary filtroSeul" data-categoria="entretenimiento" data-en="Entertainment" data-es="Entretenimiento">
+    Entretenimiento
+</button>
+
+<button class="btn btn-outline-primary filtroSeul" data-categoria="naturaleza" data-en="Nature" data-es="Naturaleza">
+    Naturaleza
+</button>
+
+<button class="btn btn-outline-primary filtroSeul" data-categoria="gastronomia" data-en="Cuisine" data-es="Gastronomía">
+    Gastronomía
+</button>
+
+        <div class="container">
+
+        <div class="row">
+
+    <!-- Palacio Gyeongbokgung -->
+     <div class="col-md-6 destinoSeul" data-categoria="historia">
+
+        <div class="card">
+
+        <img src="assets/Palacio Gyeongbokgung - 1.jpg"
+         class="card-img-top"
+         alt="Palacio Gyeongbokgung">
+
+        <div class="card-body">
+
+        <h5 class="card-title">
+            Palacio Gyeongbokgung
+        </h5>
+
+        <p class="card-text" data-en="History" data-es="Historia">
+            Historia
+        </p>
+
+        <button id="btnVerMás_palacioGyeongbokgung" class="btn btn-primary" data-en="Learn more" data-es="Ver más">
+            Ver más
+        </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- Lotte World -->
+     <div class="col-md-6 destinoSeul" data-categoria="entretenimiento">
+
+        <div class="card">
+
+        <img src="assets/Lotte World - 1.jpg"
+         class="card-img-top"
+         alt="Lotte World">
+
+        <div class="card-body">
+
+        <h5 class="card-title">
+            Lotte World
+        </h5>
+
+        <p class="card-text" data-en="Entertainment" data-es="Entretenimiento">
+            Entretenimiento
+        </p>
+
+        <button id="btnVerMás_lotteWorld" class="btn btn-primary" data-en="Learn more" data-es="Ver más">
+            Ver más
+        </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <button id="btnVolverSeul_Destinos" class="btn btn-secondary botonVolver" data-en="Back to cities" data-es="Volver a ciudades">
+           Volver a ciudades
+        </button>
+
+
+</section>
+
+
+<!-- Pantalla de Destinos - Busan -->
+
+    <section id="destinos_busan">
+
+        <h1 data-en="Destinations" data-es="Destinos">
+            Destinos
+        </h1>
+
+        <h2 data-en="Busan" data-es="Busan">
+            Busan
+        </h2>
+
+         <h4 data-en="Filter by category" data-es="Filtrar por categoría">
+         Filtrar por categoría
+       </h4>
+
+<button class="btn btn-outline-primary filtroBusan" data-categoria="todas" data-en="All" data-es="Todas">
+    Todas
+</button>
+
+<button class="btn btn-outline-primary filtroBusan" data-categoria="historia" data-en="History" data-es="Historia">
+    Historia
+</button>
+
+<button class="btn btn-outline-primary filtroBusan" data-categoria="cultura" data-en="Culture" data-es="Cultura">
+    Cultura
+</button>
+
+<button class="btn btn-outline-primary filtroBusan" data-categoria="entretenimiento" data-en="Entertainment" data-es="Entretenimiento">
+    Entretenimiento
+</button>
+
+<button class="btn btn-outline-primary filtroBusan" data-categoria="naturaleza" data-en="Nature" data-es="Naturaleza">
+    Naturaleza
+</button>
+
+<button class="btn btn-outline-primary filtroBusan" data-categoria="gastronomia" data-en="Cuisine" data-es="Gastronomía">
+    Gastronomía
+</button>
+
+        <div class="container">
+
+        <div class="row">
+
+    <!-- Haeundae Beach -->
+     
+     <div class="col-md-6 destinoBusan" data-categoria="naturaleza">
+
+        <div class="card">
+
+        <img src="assets/Haeundae Beach - 1.jpg"
+         class="card-img-top"
+         alt="Haeundae Beach">
+
+        <div class="card-body">
+
+        <h5 class="card-title">
+            Haeundae Beach
+        </h5>
+
+        <p class="card-text" data-en="Nature" data-es="Naturaleza">
+            Naturaleza
+        </p>
+
+        <button id="btnVerMás_haeundaeBeach" class="btn btn-primary" data-en="Learn more" data-es="Ver más">
+            Ver más
+       </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- Haedong Yonggungsa -->
+     <div class="col-md-6 destinoBusan" data-categoria="cultura">
+
+        <div class="card">
+
+        <img src="assets/Haedong Yonggungsa - 1.jpg"
+         class="card-img-top"
+         alt="Haedong Yonggungsa">
+
+        <div class="card-body">
+
+        <h5 class="card-title">
+            Haedong Yonggungsa
+        </h5>
+
+        <p class="card-text" data-en="Culture" data-es="Cultura">
+            Cultura
+        </p>
+
+       <button id="btnVerMás_haedongYonggungsa" class="btn btn-primary" data-en="Learn more" data-es="Ver más">
+            Ver más
+       </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+     <button id="btnVolverBusan_Destinos" class="btn btn-secondary botonVolver" data-en="Back to cities" data-es="Volver a ciudades">
+        Volver a ciudades
+     </button>
+
+</section>
+
+<!-- Pantalla de Destinos - Jeju -->
+
+    <section id="destinos_jeju">
+
+        <h1 data-en="Destinations" data-es="Destinos">
+            Destinos
+        </h1>
+
+        <h2 data-en="Jeju" data-es="JEJU">
+            JEJU
+        </h2>
+
+        <h4 data-en="Filter by category" data-es="Filtrar por categoría">
+         Filtrar por categoría
+       </h4>
+
+<button class="btn btn-outline-primary filtroJeju" data-categoria="todas" data-en="All" data-es="Todas">
+    Todas
+</button>
+
+<button class="btn btn-outline-primary filtroJeju" data-categoria="historia" data-en="History" data-es="Historia">
+    Historia
+</button>
+
+<button class="btn btn-outline-primary filtroJeju" data-categoria="cultura" data-en="Culture" data-es="Cultura">
+    Cultura
+</button>
+
+<button class="btn btn-outline-primary filtroJeju" data-categoria="entretenimiento" data-en="Entertainment" data-es="Entretenimiento">
+    Entretenimiento
+</button>
+
+<button class="btn btn-outline-primary filtroJeju" data-categoria="naturaleza" data-en="Nature" data-es="Naturaleza">
+    Naturaleza
+</button>
+
+<button class="btn btn-outline-primary filtroJeju" data-categoria="gastronomia" data-en="Cuisine" data-es="Gastronomía">
+    Gastronomía
+</button>
+
+        <div class="container">
+
+        <div class="row">
+
+    <!-- Seongsan Ilchulbong -->
+     <div class="col-md-6 destinoJeju" data-categoria="naturaleza">
+
+        <div class="card">
+
+        <img src="assets/Seongsan Ilchulbong - 1.jpg"
+         class="card-img-top"
+         alt="Seongsan Ilchulbong">
+
+        <div class="card-body">
+
+        <h5 class="card-title">
+            Seongsan Ilchulbong
+        </h5>
+
+        <p class="card-text" data-en="Nature" data-es="Naturaleza">
+            Naturaleza
+        </p>
+
+        <button id="btnVerMás_seongsanIlchulbong" class="btn btn-primary" data-en="Learn more" data-es="Ver más">
+            Ver más
+        </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- Cheonjiyeon Waterfall -->
+     <div class="col-md-6 destinoJeju" data-categoria="naturaleza">
+
+        <div class="card">
+
+        <img src="assets/Cheonjiyeon Waterfall - 1.jpg"
+         class="card-img-top"
+         alt="Cheonjiyeon Waterfall">
+
+        <div class="card-body">
+
+        <h5 class="card-title">
+            Cheonjiyeon Waterfall
+        </h5>
+
+        <p class="card-text" data-en="Nature" data-es="Naturaleza">
+            Naturaleza
+        </p>
+
+        <button id="btnVerMás_CheonjiyeonWaterfall" class="btn btn-primary" data-en="Learn more" data-es="Ver más">
+            Ver más
+        </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+</div>
+
+     <button id="btnVolverJeju_Destinos" class="btn btn-secondary botonVolver" data-en="Back to cities" data-es="Volver a ciudades">
+        Volver a ciudades
+   </button>
+
+</section>
+
+
+<!-- Pantalla de Detalle -->
+
+<!-- Pantalla de Detalle - Seúl -->
+
+  <!-- Palacio Gyeongbokgung -->
+    <section id="detalle_palacioGyeongbokgung">
+
+    <h1 data-en="Gyeongbokgung Palace" data-es="Palacio Gyeongbokgung">
+        Palacio Gyeongbokgung
+    </h1>
+
+   <div class="container">
+
+    <img src="assets/Palacio Gyeongbokgung - 2.jpg"
+         class="img-fluid"
+         alt="Palacio Gyeongbokgung">
+
+            <p data-en="History" data-es="Historia">
+                Historia
+            </p>
+    <p data-en="The Gyeongbokgung Palace is one of the most representative historical sites in Seoul. It is known for its traditional architecture and its role in the history of the Joseon dynasty."
+      data-es=" El Palacio Gyeongbokgung es uno de los lugares históricos más representativos de Seúl. Es conocido por su arquitectura tradicional y por formar parte de la historia de la dinastía Joseon.">
+        El Palacio Gyeongbokgung es uno de los lugares históricos
+        más representativos de Seúl. Es conocido por su arquitectura
+        tradicional y por formar parte de la historia de la dinastía Joseon.
+    </p>
+
+    <p data-en="Location: Seoul, South Korea" data-es="Ubicación: Seúl, Corea del Sur">
+        Ubicación: Seúl, Corea del Sur
+    </p>
+
+    <button id="btnFavorito_palacioGyeongbokgung" class="btn btn-primary" data-en=" ♡ Add to Favorites" data-es=" ♡ Agregar a Favoritos">
+        ♡ Agregar a favoritos
+    </button>
+
+      <button id="btnVolverPalacioGyeongbokgung_Vermás" class="btn btn-secondary" data-en="Back to Destinations" data-es="Volver a Destinos">
+         Volver a Destinos
+      </button>
+    
+  </section>
+
+ <!-- Lotte World -->
+  <section id="detalle_lotteWorld">
+
+    <h1 data-en="Lotte World" data-es="Lotte World">
+        Lotte World
+    </h1>
+
+    <p data-en="History" data-es="Historia">
+        Historia
+    </p>
+
+    <img src="assets/Lotte World - 2.jpg"
+         class="img-fluid"
+         alt="Lotte World">
+
+    <p data-en="Lotte World is a large entertainment complex located in Seoul, South Korea. It features a theme park, indoor and outdoor spaces, and various recreational attractions."
+      data-es="Lotte World es un complejo de entretenimiento ubicado en Seúl, Corea del Sur. Cuenta con un parque de atracciones, espacios interiores y exteriores, y diversas atracciones recreativas.">
+       Lotte World es un complejo de entretenimiento ubicado en Seúl que cuenta con un parque de atracciones, espacios interiores y exteriores. Es un lugar pensado para disfrutar de diferentes atracciones y actividades recreativas.
+    </p>
+
+    <p data-en="Location: Seoul, South Korea" data-es="Ubicación: Seúl, Corea del Sur">
+        Ubicación: Seúl, Corea del Sur
+    </p>
+
+    <button id="btnFavorito_lotteWorld" class="btn btn-primary" data-en=" ♡ Add to Favorites" data-es=" ♡ Agregar a Favoritos">
+        ♡ Agregar a favoritos
+    </button>
+
+     <button id="btnVolverLotteWorld_Vermás" class="btn btn-secondary" data-en="Back to Destinations" data-es="Volver a Destinos">
+         Volver a Destinos
+     </button>
+
+  </section>
+
+
+  <!-- Pantalla de Detalle - Busan -->
+
+  <!-- Haeundae Beach -->
+    <section id="detalle_haeundaeBeach">
+
+    <h1 data-en="Haeundae Beach" data-es="Haeundae Beach">
+        Haeundae Beach
+    </h1>
+
+   <div class="container">
+
+    <img src="assets/Haeundae Beach - 2.jpg"
+         class="img-fluid"
+         alt="Haeundae Beach">
+
+            <p data-en="Nature" data-es="Naturaleza">
+                Naturaleza
+            </p>
+    <p data-en="Haeundae Beach is one of the most well-known tourist destinations in Busan. It is characterized by its wide sandy beach, coastal landscapes, and the activities that can be enjoyed around the shore."
+      data-es="Haeundae Beach es uno de los lugares turísticos más conocidos de Busan. Se caracteriza por su amplia zona de arena, sus paisajes costeros y las actividades que se pueden disfrutar alrededor de la playa.">
+        Haeundae Beach es uno de los lugares turísticos más conocidos
+        de Busan. Se caracteriza por su amplia zona de arena, sus paisajes
+        costeros y las actividades que se pueden disfrutar alrededor de la playa.
+    </p>
+
+    <p data-en="Location: Busan, South Korea" data-es="Ubicación: Busan, Corea del Sur">
+        Ubicación: Busan, Corea del Sur
+    </p>
+
+    <button id="btnFavorito_haeundaeBeach" class="btn btn-primary" data-en=" ♡ Add to Favorites" data-es=" ♡ Agregar a Favoritos">
+        ♡ Agregar a favoritos
+    </button>
+
+     <button id="btnVolverHaeundaeBeach_Vermás" class="btn btn-secondary" data-en="Back to Destinations" data-es="Volver a Destinos">
+         Volver a Destinos
+     </button>
+
+  </section>
+
+ <!-- Haedong Yonggungsa -->
+  <section id="detalle_haedongYonggungsa">
+
+    <h1 data-en="Haedong Yonggungsa" data-es="Haedong Yonggungsa">
+        Haedong Yonggungsa
+    </h1>
+
+    <p data-en="Culture" data-es="Cultura">
+        Cultura
+    </p>
+
+    <img src="assets/Haedong Yonggungsa - 2.jpg"
+         class="img-fluid"
+         alt="Haedong Yonggungsa">
+
+    <p data-en="Haedong Yonggungsa is a Buddhist temple located along the coast in Busan. Its location facing the sea and its traditional architecture make it a notable place to learn about part of the culture and heritage of South Korea."
+      data-es="Haedong Yonggungsa es un templo budista ubicado junto al mar en Busan. Su ubicación frente a la costa y su arquitectura tradicional lo convierten en un lugar destacado para conocer parte de la cultura y el patrimonio de Corea del Sur.">
+       Haedong Yonggungsa es un templo budista ubicado junto al 
+       mar en Busan. Su ubicación frente a la costa y su arquitectura
+       tradicional lo convierten en un lugar destacado para conocer parte
+       de la cultura y el patrimonio de Corea del Sur.
+    </p>
+
+    <p data-en="Location: Busan, South Korea" data-es="Ubicación: Busan, Corea del Sur">
+        Ubicación: Busan, Corea del Sur
+    </p>
+
+    <button id="btnFavorito_haedongYonggungsa" class="btn btn-primary" data-en=" ♡ Add to Favorites" data-es=" ♡ Agregar a Favoritos">
+        ♡ Agregar a favoritos
+    </button>
+
+     <button id="btnVolverhaedongYonggungsa_Vermás" class="btn btn-secondary" data-en="Back to Destinations" data-es="Volver a Destinos">
+         Volver a Destinos
+     </button>
+
+  </section>
+
+
+ <!-- Pantalla de Detalle - Jeju -->
+
+  <!-- Seongsan Ilchulbong -->
+    <section id="detalle_seongsanIlchulbong">
+
+    <h1 data-en="Seongsan Ilchulbong" data-es="Seongsan Ilchulbong">
+        Seongsan Ilchulbong
+    </h1>
+
+   <div class="container">
+
+    <img src="assets/Seongsan Ilchulbong - 2.jpg"
+         class="img-fluid"
+         alt="Seongsan Ilchulbong">
+
+            <p data-en="Nature" data-es="Naturaleza">
+                Naturaleza
+            </p>
+    <p data-en="Seongsan Ilchulbong is a volcanic formation located on Jeju Island. It is known for its natural landscapes and the views it offers from its peak." 
+    data-es=" Seongsan Ilchulbong es una formación volcánica ubicada en la isla de Jeju. Es conocida por sus paisajes naturales y por las vistas que ofrece desde su cima.">
+    Seongsan Ilchulbong es una formación volcánica ubicada en
+    la isla de Jeju. Es conocida por sus paisajes naturales y 
+    por las vistas que ofrece desde su cima.
+    </p>
+
+    <p data-en="Location: Jeju, South Korea" data-es="Ubicación: Jeju, Corea del Sur">
+        Ubicación: Jeju, Corea del Sur
+    </p>
+
+    <button id="btnFavorito_seongsanIlchulbong" class="btn btn-primary" data-en=" ♡ Add to Favorites" data-es=" ♡ Agregar a Favoritos">
+        ♡ Agregar a favoritos
+    </button>
+
+     <button id="btnVolverSeongsanIlchulbong_Vermás" class="btn btn-secondary" data-en="Back to Destinations" data-es="Volver a Destinos">
+         Volver a Destinos
+     </button>
+
+  </section>
+
+ <!-- Cheonjiyeon Waterfall -->
+  <section id="detalle_CheonjiyeonWaterfall">
+
+    <h1 data-en="Cheonjiyeon Waterfall" data-es="Cheonjiyeon Waterfall">
+        Cheonjiyeon Waterfall
+    </h1>
+
+    <p data-en="Nature" data-es="Naturaleza">
+        Naturaleza
+    </p>
+
+    <img src="assets/Cheonjiyeon Waterfall - 2.jpg"
+         class="img-fluid"
+         alt="Cheonjiyeon Waterfall">
+
+    <p data-en="Cheonjiyeon Waterfall is a waterfall located on Jeju Island, surrounded by vegetation and natural landscapes. It is a tourist spot where visitors can enjoy the natural environment of the island." 
+    data-es=" Cheonjiyeon Waterfall es una cascada ubicada en la isla de Jeju, rodeada de vegetación y paisajes naturales. Es un lugar turístico donde se puede disfrutar del entorno natural de la isla.">
+    Cheonjiyeon Waterfall es una cascada ubicada en la isla de
+    Jeju, rodeada de vegetación y paisajes naturales. Es un lugar
+    turístico donde se puede disfrutar del entorno natural de la isla.
+    </p>
+
+    <p data-en="Location: Jeju, South Korea" data-es="Ubicación: Jeju, Corea del Sur">
+        Ubicación: Jeju, Corea del Sur
+    </p>
+
+    <button id="btnFavorito_CheonjiyeonWaterfall" class="btn btn-primary" data-en=" ♡ Add to Favorites" data-es=" ♡ Agregar a Favoritos">
+        ♡ Agregar a favoritos
+    </button>
+
+     <button id="btnVolverCheonjiyeonWaterfall_Vermás" class="btn btn-secondary" data-en="Back to Destinations" data-es="Volver a Destinos">
+         Volver a Destinos
+     </button>
+
+  </section>
+
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

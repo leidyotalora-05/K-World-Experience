@@ -1,0 +1,460 @@
+/* = COLORES DEL PROYECTO = */
+
+:root {
+    --morado: #6C4AB6;
+    --morado-claro: #8B6CCF;
+    --azul: #4a78c2;
+    --azul-claro: #6FA3E8;
+    --fondo: #F5F3FB;
+    --blanco: #FFFFFF;
+    --texto: #29233A;
+}
+
+
+/* = DISEÑO GENERAL = */
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+    text-align: center;
+    padding: 40px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--morado);
+}
+
+h2 {
+    color: var(--azul);
+}
+
+h3,
+h4 {
+    color: var(--morado);
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* = BOTONES = */
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn {
+    min-width: 180px;
+    height: 44px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--morado);
+    border-color: var(--morado);
+}
+
+.btn-primary:hover {
+    background: var(--azul);
+    border-color: var(--azul);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--azul);
+    border-color: var(--azul);
+}
+
+.btn-secondary:hover {
+    background: var(--morado);
+    border-color: var(--morado);
+}
+
+
+/* = BOTONES VOLVER A CIUDADES = */
+
+.botonVolver {
+    width: 180px !important;
+    height: 44px !important;
+    padding: 0 !important;
+    margin: 35px auto 0 auto !important;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* = IMÁGENES DE TARJETAS = */
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* = TARJETAS GENERALES = */
+
+.card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--blanco);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(108, 74, 182, 0.20);
+}
+
+
+/* = SECCIONES OCULTAS = */
+
+#ciudades {
+    display: none;
+}
+
+#destinos_seul {
+    display: none;
+}
+
+#destinos_busan {
+    display: none;
+}
+
+#destinos_jeju {
+    display: none;
+}
+
+#favoritos {
+    display: none;
+}
+
+
+/* = INICIO = */
+
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.inicio-contenido {
+    max-width: 700px;
+    padding: 50px;
+    background: var(--blanco);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(108, 74, 182, 0.15);
+}
+
+.inicio-contenido h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--morado);
+}
+
+.inicio-contenido h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.inicio-contenido p {
+    font-size: 19px;
+    margin-bottom: 30px;
+    color: var(--texto);
+}
+
+.inicio-contenido .btn {
+    font-size: 17px;
+    padding: 12px 28px;
+}
+
+
+/* = CIUDADES = */
+
+#ciudades {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#ciudades h2 {
+    font-size: 36px;
+    margin-bottom: 35px;
+    color: var(--azul);
+}
+
+#ciudades .card {
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border-top: 4px solid var(--morado);
+}
+
+#ciudades .card:hover {
+    border-top-color: var(--azul);
+}
+
+#ciudades .card-img-top,
+#ciudades .card img {
+    height: 210px;
+    object-fit: cover;
+}
+
+#ciudades .card-body {
+    padding: 22px;
+}
+
+#ciudades .card-title {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: var(--morado);
+}
+
+#ciudades .card-text {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+#ciudades .btn {
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+
+/* = TARJETAS DE DESTINOS = */
+
+#destinos_seul .card,
+#destinos_busan .card,
+#destinos_jeju .card {
+    max-width: 300px;
+    margin: 0 auto;
+    border-top: 4px solid var(--morado);
+}
+
+#destinos_seul .card:hover,
+#destinos_busan .card:hover,
+#destinos_jeju .card:hover {
+    border-top-color: var(--azul);
+}
+
+#destinos_seul .card-img-top,
+#destinos_busan .card-img-top,
+#destinos_jeju .card-img-top {
+    height: 155px;
+    object-fit: cover;
+}
+
+#destinos_seul .card-body,
+#destinos_busan .card-body,
+#destinos_jeju .card-body {
+    padding: 16px;
+}
+
+#destinos_seul .card-title,
+#destinos_busan .card-title,
+#destinos_jeju .card-title {
+    font-size: 18px;
+    color: var(--morado);
+    font-weight: 600;
+}
+
+#destinos_seul .container,
+#destinos_busan .container,
+#destinos_jeju .container {
+    margin-top: 35px;
+}
+
+
+/* = DETALLES DE LOS DESTINOS = */
+
+#detalle_palacioGyeongbokgung,
+#detalle_lotteWorld,
+#detalle_haeundaeBeach,
+#detalle_haedongYonggungsa,
+#detalle_seongsanIlchulbong,
+#detalle_CheonjiyeonWaterfall {
+    display: none;
+}
+
+#detalle_palacioGyeongbokgung img,
+#detalle_lotteWorld img,
+#detalle_haeundaeBeach img,
+#detalle_haedongYonggungsa img,
+#detalle_seongsanIlchulbong img,
+#detalle_CheonjiyeonWaterfall img {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+
+/* = FAVORITOS = */
+ 
+#favoritos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#favoritos h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: var(--azul);
+}
+
+#listaFavoritos {
+    margin-top: 30px;
+}
+
+#listaFavoritos .card {
+    max-width: 250px;
+    margin: auto;
+}
+
+#listaFavoritos .card-img-top {
+    height: 140px;
+    object-fit: cover;
+}
+
+#listaFavoritos .btn-danger {
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+
+/* = FILTROS = */
+
+.filtroSeul,
+.filtroBusan,
+.filtroJeju {
+    min-width: 130px;
+    height: 42px;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.2s ease;
+    color: var(--morado);
+    border-color: var(--morado);
+    background: white;
+}
+
+.filtroSeul:hover,
+.filtroBusan:hover,
+.filtroJeju:hover {
+    background: var(--morado);
+    border-color: var(--morado);
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* = DISEÑO RESPONSIVE = */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    #inicio {
+        min-height: 90vh;
+        padding: 20px;
+    }
+
+    .inicio-contenido {
+        padding: 35px 20px;
+    }
+
+    .inicio-contenido h1 {
+        font-size: 36px;
+    }
+
+    .inicio-contenido h2 {
+        font-size: 24px;
+    }
+
+    .inicio-contenido p {
+        font-size: 17px;
+    }
+
+    #ciudades .card-img-top,
+    .card-img-top {
+        height: 180px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .filtroSeul,
+    .filtroBusan,
+    .filtroJeju {
+        margin: 5px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #FFBF47;
+    outline-offset: 3px;
+}
